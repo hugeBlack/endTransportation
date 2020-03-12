@@ -1,0 +1,5 @@
+execute as @e[tag=!hbep.coolDown,tag=!hbep.portalHolder,tag=!hbep.rider,scores={hbepEntityTimer=..0}] align xyz at @s if entity @e[dx=0,dy=0,dz=0,tag=hbep.portalHolder] run function hbep:teleport/teleport_init
+execute as @e[tag=hbep.coolDown,tag=!hbep.portalHolder,tag=!hbep.rider] at @s align xyz if entity @e[dx=0,dy=0,dz=0,tag=hbep.portalHolder] run function hbep:teleport/teleport_timer
+execute as @e[tag=hbep.coolDown,tag=!hbep.portalHolder,tag=!hbep.rider] at @s align xyz unless entity @e[dx=0,dy=0,dz=0,tag=hbep.portalHolder] run function hbep:teleport/teleport_cancel
+scoreboard players remove @e[scores={hbepEntityTimer=1..}] hbepEntityTimer 1
+execute as @e[tag=!hbep.portalHolder,tag=!hbep.rider] unless entity @s[scores={hbepEntityTimer=-947483648..947483647}] run scoreboard players set @s hbepEntityTimer 0
