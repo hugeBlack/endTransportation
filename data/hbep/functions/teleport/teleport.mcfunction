@@ -1,6 +1,6 @@
 tag @s remove hbep.coolDown
 tag @s add hbep.needCooldown
-effect give @s resistance 2 127 true
+effect give @s resistance 2 255 true
 execute if entity @s[nbt={Dimension:0}] run tag @s add hbep.o2e
 execute if entity @s[nbt={Dimension:1}] run tag @s add hbep.e2o
 execute at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["hbep.tpHolder"]}

@@ -13,6 +13,7 @@ scoreboard players set sizeX hbepTemp -1
 scoreboard players set sizeY hbepTemp -1
 scoreboard players set sizeZ hbepTemp -1
 scoreboard players set areaEmpty hbepTemp 1
+scoreboard players set createFailed hbepTemp 1
 execute as @e[tag=hbep.xp] at @s run function hbep:create_portal/get_size/x_pos
 execute as @e[tag=hbep.xn] at @s run function hbep:create_portal/get_size/x_neg
 execute as @e[tag=hbep.yp] at @s run function hbep:create_portal/get_size/y_pos
