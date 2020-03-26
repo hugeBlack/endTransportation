@@ -25,7 +25,11 @@ execute if score sizeX hbepTemp matches ..1 run scoreboard players set validX hb
 execute if score sizeZ hbepTemp matches ..1 run scoreboard players set validZ hbepTemp 0
 
 execute if score validY hbepTemp matches 1 if score validX hbepTemp matches 1 run function hbep:create_portal/xy_find
-execute if score validY hbepTemp matches 1 unless score validX hbepTemp matches 1 if score validZ hbepTemp matches 1 run function hbep:create_portal/zy_find
+execute if score validY hbepTemp matches 1 if score validZ hbepTemp matches 1 run execute unless score validX hbepTemp matches 1 run function hbep:create_portal/zy_find
+
+execute if score validY hbepTemp matches 1 if score validX hbepTemp matches 1 run scoreboard players set createFailed hbepTemp 0
+execute if score validY hbepTemp matches 1 if score validZ hbepTemp matches 1 run execute unless score validX hbepTemp matches 1 run scoreboard players set createFailed hbepTemp 0
+
 function hbep:create_portal/set_nearby_count
 
 scoreboard players set nowY hbepTemp 0

@@ -1,1 +1,0 @@
-execute positioned ^ ^ ^0.1 if block ~ ~ ~ minecraft:black_glazed_terracotta align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Small:1b,ArmorItems:[{},{},{},{id:"minecraft:black_glazed_terracotta",Count:1b,tag:{CustomModelData:13360003}}],Invisible:1b,Invulnerable:1b,Rotation:[0f,0f],NoGravity:1b,Tags:["hbep.black_glazed_terracotta"],DisabledSlots:1398100,Fire:999s}
